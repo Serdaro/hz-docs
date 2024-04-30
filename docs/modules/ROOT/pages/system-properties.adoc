@@ -892,8 +892,8 @@ the Hazelcast instance without waiting to shutdown gracefully.
 | Specifies the behavior when JVM is exiting while the Hazelcast instance is still running.
 It has two values: TERMINATE and GRACEFUL. The former one terminates the Hazelcast instance immediately.
 The latter, GRACEFUL, initiates the graceful shutdown which can significantly slow down the JVM exit process, but it tries to retain data safety.
-Note that you should always shutdown Hazelcast explicitly via using the method `HazelcastInstance.shutdown()`.
-It's not recommended to rely on the shutdown hook, this is a last-effort measure.
+
+NOTE: Always shutdown Hazelcast explicitly using the `HazelcastInstance.shutdown()` method; see xref:maintain-cluster:shutdown.adoc#graceful-shutdown[Graceful Shutdown]. It's not recommended to rely on the shutdown hook, this is a last-effort measure.
 
 |`hazelcast.slow.operation.detector.enabled`
 |true
